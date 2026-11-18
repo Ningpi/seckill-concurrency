@@ -1,0 +1,169 @@
+[
+  {
+    "tag": "A-oversell",
+    "app": "app_naive:app",
+    "stock": 100,
+    "total_requests": 1500,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 11.521,
+    "qps": 130.2,
+    "latency_ms": {
+      "p50": 1439.5,
+      "p95": 5832.6,
+      "p99": 7934.3,
+      "max": 10258.3
+    },
+    "codes": {
+      "0": 178,
+      "2": 1321,
+      "exc:ReadError": 1
+    },
+    "success": 178,
+    "sold_out": 1321,
+    "dup": 0,
+    "errors": 1,
+    "remaining": -78,
+    "orders": 178,
+    "oversell": 78,
+    "sold_equals_orders": true
+  },
+  {
+    "tag": "A-oversell",
+    "app": "app_db_atomic:app",
+    "stock": 100,
+    "total_requests": 1500,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 10.558,
+    "qps": 142.1,
+    "latency_ms": {
+      "p50": 1240.9,
+      "p95": 5643.9,
+      "p99": 7534.5,
+      "max": 9660.9
+    },
+    "codes": {
+      "0": 100,
+      "2": 1400
+    },
+    "success": 100,
+    "sold_out": 1400,
+    "dup": 0,
+    "errors": 0,
+    "remaining": 0,
+    "orders": 100,
+    "oversell": 0,
+    "sold_equals_orders": true
+  },
+  {
+    "tag": "A-oversell",
+    "app": "app_redis:app",
+    "stock": 100,
+    "total_requests": 1500,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 14.573,
+    "qps": 102.9,
+    "latency_ms": {
+      "p50": 1695.0,
+      "p95": 7990.1,
+      "p99": 11058.4,
+      "max": 13155.9
+    },
+    "codes": {
+      "0": 100,
+      "2": 1398,
+      "exc:ReadError": 2
+    },
+    "success": 100,
+    "sold_out": 1398,
+    "dup": 0,
+    "errors": 2,
+    "remaining": 0,
+    "orders": 100,
+    "oversell": 0,
+    "sold_equals_orders": true
+  },
+  {
+    "tag": "B-throughput",
+    "app": "app_naive:app",
+    "stock": 2000,
+    "total_requests": 2000,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 13.358,
+    "qps": 149.7,
+    "latency_ms": {
+      "p50": 1205.8,
+      "p95": 5760.6,
+      "p99": 8278.9,
+      "max": 12345.1
+    },
+    "codes": {
+      "0": 2000
+    },
+    "success": 2000,
+    "sold_out": 0,
+    "dup": 0,
+    "errors": 0,
+    "remaining": 0,
+    "orders": 2000,
+    "oversell": 0,
+    "sold_equals_orders": true
+  },
+  {
+    "tag": "B-throughput",
+    "app": "app_db_atomic:app",
+    "stock": 2000,
+    "total_requests": 2000,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 13.661,
+    "qps": 146.4,
+    "latency_ms": {
+      "p50": 1234.5,
+      "p95": 5867.8,
+      "p99": 7526.7,
+      "max": 11419.5
+    },
+    "codes": {
+      "0": 2000
+    },
+    "success": 2000,
+    "sold_out": 0,
+    "dup": 0,
+    "errors": 0,
+    "remaining": 0,
+    "orders": 2000,
+    "oversell": 0,
+    "sold_equals_orders": true
+  },
+  {
+    "tag": "B-throughput",
+    "app": "app_redis:app",
+    "stock": 2000,
+    "total_requests": 2000,
+    "concurrency": 300,
+    "workers": 4,
+    "elapsed_s": 18.159,
+    "qps": 110.1,
+    "latency_ms": {
+      "p50": 1757.5,
+      "p95": 7407.0,
+      "p99": 11246.3,
+      "max": 16345.0
+    },
+    "codes": {
+      "0": 2000
+    },
+    "success": 2000,
+    "sold_out": 0,
+    "dup": 0,
+    "errors": 0,
+    "remaining": 0,
+    "orders": 2000,
+    "oversell": 0,
+    "sold_equals_orders": true
+  }
+]
